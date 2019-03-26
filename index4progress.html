@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>progress</title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container my-4">
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" style="width:70%"></div>
+            </div>
+            <!-- progress就是进度条 -->
+            <progress max="100" value="70"></progress>
+
+            <!-- meter:度量器，衡量当前进度
+                 high:规定较高的值
+                 low:规定较低的值
+                 max:最大值
+                 min:最小值
+                 value:当前度量值
+            -->
+            <meter max="100" min="0" high="80" low="40" value="30"></meter>
+            <meter max="100" min="0" high="80" low="40" value="50"></meter>
+            <meter max="100" min="0" high="80" low="40" value="90"></meter>
+        </div>
+    </body>
+</html>

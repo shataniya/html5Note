@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>video&audio</title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <!-- 
+            audio标签可以引入音频文件
+            src="" 就是写入路径
+            controls:必须添加控制器，没有控制器的话就不会显示播放器
+            autoplay:自动播放，但是测试了一下，谷歌chrome不支持 
+            loop:循环播放
+         -->
+        <audio src="audio/balloon.mp3" controls autoplay ></audio>
+
+        <!-- 
+            video标签可以引入视频文件
+            src="" 就是写入路径
+            controls:必须添加控制器，没有控制器的话就不会显示播放器
+            autoplay:自动播放，但是测试了一下，谷歌chrome不支持 
+            loop:循环播放
+            width:宽度
+            height:高度
+            poster:当视频还没有完全下载，或者用户还没有点击播放前显示的封面。默认是显示当前的视频文件的第一帧画面
+         -->
+         <!-- 设置宽高的时候，一般只会设置其中一个宽或高，而不会同时设置 -->
+        <video src="video/kato-test01.mp4" controls></video>
+
+        <!-- 重点说明source的应用：考虑到不同版本的浏览器支持不同的视频格式，因此提供了一个source标签来添加多个文件格式的视频，然后让浏览器自己
+             去选择，这样就解决了不同版本浏览器，不同格式的一些问题
+        -->
+
+        <video controls>
+            <source src="video/kato-test01.mp4" type="video/mp4">
+        </video>
+    </body>
+</html>

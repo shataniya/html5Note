@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li class="one" id="one">one</li>
+            <li class="two" id="two">two</li>
+            <li class="three" id="three">three</li>
+            <li class="four" id="four">four</li>
+            <li class="five" id="five">five</li>
+        </ul>
+
+        <script>
+            
+            /*  获取dom的三种方式：
+                1.document.getElementById()
+                2.document.getElementByClassName()
+                3.document.getElementsByTagName()
+
+                html5新增的获取方式：
+                1.document.querySelector() -->根据id值或者class属性值来获取符合条件的元素，只返回一个元素
+                2.document.querySelectorAll() -->根据标签名,id,class属性值来获取符合条件的所有元素，不同的是，返回一个数组
+            
+             */
+
+            console.log(document.getElementById('one'));
+            console.log(document.querySelector('#one'));
+            console.log(document.querySelectorAll('li'));
+            console.log(document.querySelectorAll('.three'));
+            
+        </script>
+    </body>
+</html>

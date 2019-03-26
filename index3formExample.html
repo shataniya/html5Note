@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <form style="width:500px;margin: 100px auto;border:1px solid #e0e0e0;background-color:cornflowerblue;border-radius: 5px;" class="text-center p-4">
+            <h3>学生档案</h3>
+            <div class="form-group">
+                <label for="StudentName">姓名</label>
+                <input class="form-control" type="text" id="StudentName" name="StudentName" required>
+            </div>
+            <div class="form-group">
+                <label for="UserPhone">手机号码</label>
+                <input class="form-control" type="tel" id="UserPhone" name="UserPhone" required pattern="^(\+86)?1[3-9]\d{9}$">
+            </div>
+            <div class="form-group">
+                <label for="Email">邮箱地址</label>
+                <input class="form-control" type="email" id="Email" name="Email" required multiple>
+            </div>
+            <div class="form-group">
+                <label for="insititute">所属学院</label>
+                <input class="form-control" type="text" id="insititute" name="insititute" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">入学成绩</label>
+                <input class="form-control" type="number" id="grade" name="grade">
+            </div>
+            <div class="form-group">
+                <label for="standardLevel">基础水平</label>
+                <meter max="100" min="0" high="80" low="60" value="75" style="display: block;width: 100%;" id="standardLevel"></meter>
+            </div>
+            <div class="form-group">
+                <label for="enterData">入学日期</label>
+                <input class="form-control" type="date" id="enterData" name="enterData">
+            </div>
+            <div class="form-group">
+                <label for="graduateData">毕业日期</label>
+                <input class="form-control" type="date" id="graduateData" name="graduateData">
+            </div>
+            <input class="btn btn-warning btn-block" type="submit" value="submit" style="color:white;">
+        </form>
+    </body>
+</html>

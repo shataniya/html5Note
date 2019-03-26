@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <script>
+            alert('把网络关掉，会有小惊喜！！')
+            /* ononline:当网络连接时触发事件 */
+            window.addEventListener('online',function(){
+                alert('叫你做什么你就做什么，你是不是傻~~');
+            });
+            /* onoffline:当网络断开的时候触发事件 */
+            window.addEventListener('offline',function(){
+                alert('再把网络开启，会有大惊喜！！');
+            });
+        
+        </script>
+
+    </body>
+</html>

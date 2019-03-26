@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form style="width:500px;margin:100px auto;">
+                <div class="custom-control custom-file mb-2">
+                    <input class="custom-file-input" type="file" id="filecontent" multiple>
+                    <label class="custom-file-label" for="filecontent" data-browse="input">choose file</label>
+                    <!-- 在file中，label要放在 input 后面 -->
+                </div>
+                <img src="" id="imgcontent" style="width:100%" class="mb-2">
+                <button class="btn btn-primary btn-block" type="button" id="button">button</button>
+            </form>
+        </div>
+
+
+        <script>
+            /* FileReader:是要创建的获取文件的对象 */
+            $('#filecontent').change(function(){
+                var reader = new FileReader();
+                var files = document.querySelector('#filecontent').files;
+                /* file 选择的文件被保存在 files 中 */
+                //console.log(files);
+                reader.readAsDataURL(files[0]);
+                /* readAsDataURL() 是获取文件的一段字符串编码，以 data 开头的 base64 编码，并且获取的结果都会保存在 result 中 */
+                reader.onload = function(){
+                    /* 这里 onload 是要等待文件读取，加载完成时触发事件 */
+                    //console.log(reader.result);
+                    document.querySelector('#imgcontent').src = reader.result;
+                };
+            });
+        
+        </script>
+    </body>
+</html>

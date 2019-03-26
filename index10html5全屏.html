@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body style="height:2000px;">
+        <div class="container">
+            <div class="text-center" id="screen">
+                <img src="img/02.png" class="my-3" style="width:1000px;">
+                <div class="btn-group">
+                    <button class="btn btn-success" type="button" id="full">全屏</button>
+                    <button class="btn btn-warning" type="button" id="cancelFull">取消全屏</button>
+                    <button class="btn btn-danger" type="button" id="isFull">是否全屏</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            /* 
+                全屏操作的主要方法和属性：
+                1.requestFullScreen():开启全屏显示
+                    对于不同的浏览器要添加不同的前缀
+                    1.chrome:webkit  2.firefox:moz  3.ie:ms
+                2.cancelFullScreen():退出全屏显示
+                    注意一个细节：
+                        退出全屏只能通过document来实现
+                3.fullscreenElement():判断是否是全屏状态 注意也是通过document来判断
+            
+             */
+        
+            $('#full').click(function(){
+                document.querySelector('#screen').webkitRequestFullScreen();//不能用jQuery,只能用html5
+            });
+            $('#cancelFull').click(function(){
+                document.webkitCancelFullScreen();
+            });
+            $('#isFull').click(function(){
+                if(document.webkitFullscreenElement){
+                    alert("现在是全屏状态");
+                }else{
+                    alert("不是全屏状态");
+                }
+            });
+        
+        </script>
+
+
+
+    </body>
+</html>

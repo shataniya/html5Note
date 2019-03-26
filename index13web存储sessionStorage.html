@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form style="width:300px;margin:100px auto;" class="text-center">
+                <div class="form-group mb-2">
+                    <label for="UserName">UserName</label>
+                    <input class="form-control" type="text" id="UserName" name="UserName" required>
+                </div>
+                <button class="btn btn-primary btn-block mb-2" type="button" id="saveUserName">saveUserName</button>
+                <button class="btn btn-primary btn-block mb-2" type="button" id="getUserName">getUserName</button>
+                <button class="btn btn-primary btn-block mb-2" type="button" id="clearUserName">clearUserName</button>
+            </form>
+        </div>
+
+        <script>
+        
+            $('#saveUserName').click(function(){
+                window.sessionStorage.setItem('UserName',$('#UserName').val());
+            });
+            $('#getUserName').click(function(){
+                console.log(window.sessionStorage.getItem('UserName'));
+            });
+            $('#clearUserName').click(function(){
+                window.sessionStorage.removeItem('UserName');
+            });
+
+            /* 
+                sessionStorage 是在浏览器中存储数据的方式
+                注意事项：
+                1.存储的数据只能保存在当前网页，打开新的网页之后就会销毁，因此不同网页之间不可以共享数据
+                2.浏览器关闭之后 sessionStorage 保存的数据也会销毁
+             */
+
+        </script>
+
+    </body>
+</html>
